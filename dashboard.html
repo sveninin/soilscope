@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>soilSCOPE Dashboard</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: #f7f5f0;
+      color: #333;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      width: 100%;
+      background-color: #2e6b2e;
+      color: white;
+      padding: 1rem;
+      font-size: 1.8rem;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Main Container */
+    .dashboard-container {
+      width: 90%;
+      max-width: 800px;
+      margin-top: 2rem;
+    }
+
+    /* Welcome Message */
+    .welcome-message {
+      font-size: 2rem;
+      margin: 1rem 0;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .button {
+      flex: 1;
+      background-color: #e6f2e6;
+      border: 2px solid #2e6b2e;
+      color: #2e6b2e;
+      padding: 1.5rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button:hover {
+      background-color: #cde4cd;
+    }
+
+    .button img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Info Box */
+    .info-box {
+      background-color: #e0f2e0;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .info-box h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e6b2e;
+    }
+
+    .info-box p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    /* Current Offers */
+    .offers-box {
+      background-color: #f2f2f2;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .offers-box h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e6b2e;
+    }
+
+    .offer-items {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    .offer-item {
+      flex: 1;
+      background-color: white;
+      padding: 1rem;
+      border: 2px solid #2e6b2e;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      color: #2e6b2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .offer-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-item span {
+      font-weight: normal;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    /* Store Link */
+    .store-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2e6b2e;
+      text-decoration: none;
+    }
+
+    .store-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Feedback Section */
+    .feedback-section {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .feedback-button {
+      background-color: #2e6b2e;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .feedback-button:hover {
+      background-color: #265826;
+    }
+
+    .feedback-link {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #2e6b2e;
+      text-decoration: none;
+    }
+
+    .feedback-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .action-buttons, .offer-items {
+        flex-direction: column;
+      }
+      .welcome-message, .info-box, .offers-box {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">soilSCOPE Dashboard</div>
+
+  <!-- Main Dashboard Container -->
+  <div class="dashboard-container">
+
+    <!-- Welcome Message -->
+    <div class="welcome-message">Welcome back, Demo!</div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <div class="button">
+        <img src="reports.png" alt="View Reports Icon">
+        View Previous Reports
+      </div>
+      <div class="button">
+        <img src="add_sample.png" alt="Submit Sample Icon">
+        Submit a new sample
+      </div>
+    </div>
+
+    <!-- Farm Monitor Status -->
+    <div class="info-box">
+      <h3>Farm Monitor status: All Good</h3>
+      <p>There are no current pathogen reports in your area, no treatment products are needed.</p>
+    </div>
+
+    <!-- Current Offers -->
+    <div class="offers-box">
+      <h3>Current Offers</h3>
+      <div class="offer-items">
+        <div class="offer-item">
+          <img src="fertilizer_placeholder.jpg" alt="Fertilizer 1">
+          Fertilizer 1
+          <span>£100</span>
+        </div>
+        <div class="offer-item">
+          <img src="fertilizer_placeholder.jpg" alt="BioInoculant 2">
+          BioInoculant 2
+          <span>£100</span>
+        </div>
+        <div class="offer-item">
+          <img src="fertilizer_placeholder.jpg" alt="BioMakr">
+          BioMakr
+          <span>£100</span>
+        </div>
+        <div class="offer-item">
+          <img src="fertilizer_placeholder.jpg" alt="Bioclone">
+          Bioclone
+          <span>£100</span>
+        </div>
+      </div>
+      <a href="https://www.example.com" class="store-link">Visit Store</a>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="feedback-section">
+      <button class="feedback-button">Feedback?</button>
+      <a href="mailto:biotechyes@yes" class="feedback-link">Contact us</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
